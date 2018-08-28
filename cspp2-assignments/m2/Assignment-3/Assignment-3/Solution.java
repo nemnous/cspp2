@@ -22,7 +22,7 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);  
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
@@ -36,9 +36,9 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static long power(int base, int exponent) {
+    static long power(final int base, final int exponent) {
         long product = 1;
-        for(int i = 0; i <exponent; i++) {
+        for (int i = 0; i < exponent; i++) {
             product *= base;
         }
         return product;
