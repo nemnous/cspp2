@@ -8,6 +8,7 @@ import java.util.Scanner;
     * main class.
 */
 public final class QuotientRemainder {
+    
     /**
     * unused constructor.
     */
