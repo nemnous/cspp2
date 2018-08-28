@@ -22,8 +22,8 @@ public final class DegreesToFahrenheit {
         System.out.println("Enter temperature in celsius:");
         Scanner inp = new Scanner(System.in);
         float celsius = inp.nextFloat();
-        final float t1 = 1.8;
-        final int t2 = 32;
+        final double t1 = 1.8;
+        final float t2 = 32;
         System.out.println(celsius * t1 + t2);
     }
 }
