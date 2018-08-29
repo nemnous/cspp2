@@ -21,7 +21,7 @@ public final class ConverttoWhileLoop {
     /**
      * main function.
      *
-     * @param      args  The arguments
+     * @param  args  The arguments
      */
     public static void main(final String[] args) {
         int i = 2;
