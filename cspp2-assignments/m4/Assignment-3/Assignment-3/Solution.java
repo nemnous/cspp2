@@ -13,7 +13,7 @@ public final class Solution
 		// String sss = sc.next();
 		for (int i = 0; i < n; i++) {
 			String s = sc.next();
-			System.out.println(s);
+			// System.out.println(s);
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
