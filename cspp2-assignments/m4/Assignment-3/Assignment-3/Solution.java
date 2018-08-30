@@ -12,7 +12,7 @@ public final class Solution
 		int n = Integer.parseInt(sss);	
 		// String sss = sc.next();
 		for (int i = 0; i < n; i++) {
-			String s = sc.nextLine();
+			String s = sc.next();
 			System.out.println(s);
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
