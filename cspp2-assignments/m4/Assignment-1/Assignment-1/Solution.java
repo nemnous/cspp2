@@ -1,23 +1,39 @@
-
-import java.util.*;
-public class Solution
-{/*
-	Fill this main function to print maximum of given array
-	*/
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int[] arr = new int[n];
-		for (int i = 0; i < n; i++) {
-			arr[i] = sc.nextInt();
-		}
-		int max = arr[0];
-		for (int i = 0; i < n; i++) {
-			if (arr[i] > max) {
-				max = arr[i];
-			}
-		}
-		System.out.println(max);
-	}
+/**
+ * author: @nemnous.
+ * Date: 30 Aug 2018
+ * Maximum of given array
+ */
+import java.util.Scanner;
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        /**
+         * unused constructor.
+         */
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int max = arr[0];
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
 }
