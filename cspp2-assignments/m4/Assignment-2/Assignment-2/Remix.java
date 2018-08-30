@@ -8,9 +8,11 @@ public class Remix {
 		Scanner inp = new Scanner(System.in);
 		int row1 = inp.nextInt();
 		int col1 = inp.nextInt();
+		inp.nextLine();
 		int[][] mat1 = readmat(row1, col1);
 		int row2 = inp.nextInt();
 		int col2 = inp.nextInt();
+		inp.nextLine();
 		int[][] mat2 = readmat(row2, col2);
 		if (row1 == row2 && col1 == col2) {
 			for (int i =0; i < row1; i++) {
@@ -35,6 +37,7 @@ public class Remix {
 			for (int j =0; j < col; j++) {
 				arr[i][j] = inp.nextInt();
 			}
+			inp.nextLine();
 		}
 		return arr;
 	}
