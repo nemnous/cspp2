@@ -19,12 +19,17 @@ public class Solution {
 				arr2[i][j] = Integer.parseInt(inp.next());
 			}
 		}
-
-		for (int i = 0; i < row2; i++) {
+		if (row1 == row2 && col1 == col2){
+			for (int i = 0; i < row2; i++) {
 			for (int j = 0;j < col2; j++) {
 				System.out.print(arr1[i][j] + arr2[i][j] + " ");
 			}
 			System.out.println("");
+		}	
 		}
+		else {
+			System.out.println("not possible");
+		}
+		
 	}
 }
