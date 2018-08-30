@@ -18,7 +18,7 @@ public class Solution
 	//Write reverseString function
 	static String reverseString(String s) {
 		String str1 = "";
-		for (int i = s.length(); i >= 0; i--) {
+		for (int i = s.length() - 1; i >= 0; i--) {
 			str1 += s.charAt(i);
 		}
 		return str1;
