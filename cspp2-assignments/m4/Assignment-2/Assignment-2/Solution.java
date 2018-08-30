@@ -24,7 +24,7 @@ public class Solution {
 			for (int j = 0;j < col2; j++) {
 				System.out.print(arr1[i][j] + arr2[i][j] + " ");
 			}
-			System.out.print("\b");
+			System.out.print('\b');
 			System.out.println("");
 		}	
 		}
