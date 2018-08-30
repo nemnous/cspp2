@@ -9,7 +9,7 @@ public final class Solution
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		String sss = sc.next();
+		// String sss = sc.next();
 		for (int i = 0; i < n; i++) {
 			String s = sc.nextLine();
 			// System.out.println(s);
@@ -21,7 +21,7 @@ public final class Solution
 		int base = 1;
 		int sum = 0;
 		for(int i = s.length() - 1; i >= 0 ; i--) {
-			sum = sum + base * Character.getNumericValue(s.charAt(i));
+			sum = sum + (base * Character.getNumericValue(s.charAt(i)));
 			base *= 2;
 		}
 
