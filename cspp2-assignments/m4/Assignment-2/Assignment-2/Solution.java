@@ -42,8 +42,12 @@ public final class Solution {
         if (row1 == row2 && col1 == col2) {
             for (int i = 0; i < row2; i++) {
             for (int j = 0; j < col2; j++) {
-                String b = (j != col2 - 1) ? " " : "";
-                System.out.print(arr1[i][j] + arr2[i][j] + b);
+                if (j != col2 - 1) {
+                    System.out.print(arr1[i][j] + arr2[i][j] + " ");
+                } else {
+                    System.out.print(arr1[i][j] + arr2[i][j]);
+                }
+                // String b = (j != col2 - 1) ? " " : "";
             }
             System.out.println("");
         }
