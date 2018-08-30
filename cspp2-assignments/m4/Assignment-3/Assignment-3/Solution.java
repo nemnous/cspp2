@@ -8,8 +8,7 @@ public final class Solution
 	*/
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String sss = sc.next();
-		int n = Integer.parseInt(sss);	
+		int n = sc.nextInt();	
 		// String sss = sc.next();
 		for (int i = 0; i < n; i++) {
 			String s = sc.next();
