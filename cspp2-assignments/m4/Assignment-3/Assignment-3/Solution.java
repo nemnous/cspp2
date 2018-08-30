@@ -24,6 +24,7 @@ public class Solution
 			sum = sum + base * Character.getNumericValue(s.charAt(i));
 			base *= 2;
 		}
+		
 		return Integer.toString(sum);
 	}
 
