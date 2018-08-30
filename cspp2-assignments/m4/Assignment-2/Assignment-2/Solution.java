@@ -22,8 +22,7 @@ public class Solution {
 		if (row1 == row2 && col1 == col2){
 			for (int i = 0; i < row2; i++) {
 			for (int j = 0;j < col2; j++) {
-				System.out.print(arr1[i][j] + arr2[i][j]);
-				System.out.print(" ");
+				System.out.printf("%d", arr1[i][j] + arr2[i][j]);
 			}
 			System.out.println("");
 		}	
