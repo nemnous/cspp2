@@ -17,7 +17,7 @@ public class Remix {
 		if (row1 == row2 && col1 == col2) {
 			for (int i =0; i < row1; i++) {
 				for(int j =0; j < col1; j++) {
-					if (i < col1) {
+					if (i < col1-1) {
 					System.out.print(mat1[i][j]+mat2[i][j]+" ");
 					} else {
 					System.out.print(mat1[i][j]+mat2[i][j]+"");
