@@ -29,10 +29,10 @@ final class Solution {
     for ( int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             for ( int k = 0; k < a[i][j] + 100; k += 100) {
-                int low = i;
-                int high = i + 100;
+                int low = k;
+                int high = k + 100;
                 int mid = (low + high) / 2;
-                if (a[i][j] > low && a[i][j] < high) {
+                if (a[i][j] > low && a[i][j] <= high) {
                     if ( a[i][j] < mid){
                         matrix[i][j] = low;
                         break;
