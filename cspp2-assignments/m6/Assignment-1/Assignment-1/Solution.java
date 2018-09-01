@@ -21,7 +21,7 @@ public final class Solution {
 	// write your code here
     	for (int i = 9; i <= n; i++) {
     		int t = 1;
-    		for (int j = 2; j < n / 2; j++) {
+    		for (int j = 2; j < i/2; j++) {
     			if (i % j == 0) {
     				t = 0;
     				break;
