@@ -1,9 +1,10 @@
+/**
+ * @author: nemnous
+ */
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * Write a java program to replace each element
- *  of the given char array that matches the given
- *  character with the given replacement.
+ * class Solution.
  */
 final class Solution {
     /**
@@ -25,8 +26,8 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-	   for (int i = 0; i < charArray.length; i++) {
-            if ( charArray[i] == oldChar) {
+       for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] == oldChar) {
                 charArray[i] = newChar;
             }
        }
