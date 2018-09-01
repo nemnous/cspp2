@@ -1,9 +1,11 @@
+/**
+ * @author :nemnous.
+ * Date: 1 Sep 2018
+ * Odd composite numbers
+ */
 import java.util.Scanner;
 /**
- * Write a java program to find the odd composite numbers
- * between 2 and n where n is given as an input.
- *
- * @author : 
+ * class Solution.
  */
 public final class Solution {
     /**
@@ -18,20 +20,20 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-	// write your code here
-    	for (int i = 9; i <= n; i++) {
-    		int t = 1;
-    		for (int j = 2; j < i/2; j++) {
-    			if (i % j == 0) {
-    				t = 0;
-    				break;
-
-    			}
-    		}
-    		if ( t == 0 && i % 2 != 0) {
-    			System.out.println(i);
-    		}
-    	}
+    // write your code here
+        final int nine = 9;
+        for (int i = nine; i <= n; i++) {
+            int t = 1;
+            for (int j = 2; j < i / 2; j++) {
+                if (i % j == 0) {
+                    t = 0;
+                    break;
+                }
+            }
+            if (t == 0 && i % 2 != 0) {
+                System.out.println(i);
+            }
+        }
     }
     /**
     * main method as driver program.
@@ -43,4 +45,5 @@ public final class Solution {
         oddComposites(n);
     }
 }
+
 
