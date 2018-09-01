@@ -25,6 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
+        int[][] matrix = new int[rows][columns];
     for ( int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             for ( int k = 0; k < a[i][j] + 100; k += 100) {
@@ -33,17 +34,17 @@ final class Solution {
                 int mid = (low + high) / 2;
                 if (a[i][j] > low && a[i][j] < high) {
                     if ( a[i][j] < mid){
-                        a[i][j] = low;
+                        matrix[i][j] = low;
                         break;
                     } else {
-                        a[i][j] = high;
+                        matrix[i][j] = high;
                         break;
                     }
                 }
             }
         }
     }
-	return a;
+	return matrix;
     }
     /**
      * Main function.
