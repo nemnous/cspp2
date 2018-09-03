@@ -42,17 +42,14 @@ final public class Solution {
          * unused constructor.
          */
     }
-    
     /**
      * main func.
      * @param args is argument.
      */
-    public static void main(final String args[])
-    {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input);       
+        InputValidator i = new InputValidator(input);
         System.out.println(i.validateData());
     }
-
 }
