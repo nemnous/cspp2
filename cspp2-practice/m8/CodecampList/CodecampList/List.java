@@ -213,9 +213,10 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i : Arr)
-            if (i == item)
+        for (int i = 0; i < size; i++) {
+            if (Arr[i] == item)
                 return i;
+        }
         return -1;
     }
 
