@@ -183,7 +183,13 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return Arrays.toString(Arr);
+        // return Arrays.toString(Arr);
+        String res = "[";
+        for (int i = 0; i < size - 1; i++) {
+            res = res + Arr[i] + ",";
+        }
+        res += Arr[size - 1] + "]";
+        return res;
     } 
     
     /*
