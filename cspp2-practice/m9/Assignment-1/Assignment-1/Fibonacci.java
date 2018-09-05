@@ -30,7 +30,7 @@ public class Fibonacci
         
     }
     public static List fib(int n) {
-        List list = new List();
+        List list = new List(n);
 
         // todo - complete this method
         int first = 0, second = 1, next;
