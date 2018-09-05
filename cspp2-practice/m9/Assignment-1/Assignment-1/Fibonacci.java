@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 /*
  * In the previous module you have created List ADT.
  * ADTs are developed as reusable libraries
@@ -26,26 +26,22 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    private static int[] list;
-    private static int size;
     private Fibonacci() {
-        size = 0;
-        list = new int[20];
+        
     }
     public static List fib(int n) {
+        List list = new List();
+
         // todo - complete this method
         int first = 0, second = 1, next;
         for (int i = 0; i < n; i++) {
-            add(first);
+            list.add(first);
             next = first + second;
             first = second;
             second = next;
         }
-        return null;
-    }
-    public static void add(final int item) {
-        //Inserts the specified element at the end of the list.
-        list[size++] = item;
+        // List<Integer> list = Arrays.asList(Arr);
+        return list;
     }
 
 	public static void main(String[] args) {
