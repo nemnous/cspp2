@@ -273,7 +273,7 @@ public class List {
         if (items.length > 0) {
             int s = size;
             for (int i = s; i < s + items.length; i++) {
-                add(items[i]);
+                list[i] = items[i - s];
             }
         }
     }
