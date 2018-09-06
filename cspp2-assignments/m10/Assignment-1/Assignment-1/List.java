@@ -300,9 +300,9 @@ public class List {
             int s = size;
             for (int i = s; i < s + items.length; i++) {
                 list[i] = items[i - s];
-                size++;
             }
         }
+        size += items.length;
     }
 
      /* 
