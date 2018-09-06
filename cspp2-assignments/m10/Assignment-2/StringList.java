@@ -1,3 +1,9 @@
+/**
+ * author @nemnous.
+ * Date 06 Sep 2018.
+ * List Adt.
+ */
+
 
 //An interface for ListADT of strings
 import java.util.Arrays;
@@ -283,7 +289,6 @@ public class StringList implements StringListInterface {
 
             list[list.length - 1] = null;
             size--;
-            //System.out.println(lists.toString(list));
         }
 
     }
