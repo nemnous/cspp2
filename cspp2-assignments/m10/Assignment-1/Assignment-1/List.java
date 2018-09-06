@@ -275,6 +275,7 @@ public class List {
             int s = size;
             for (int i = s; i < s + items.length; i++) {
                 list[i] = items[i - s];
+                size++;
             }
         }
     }
@@ -297,6 +298,7 @@ public class List {
                 list[i] = list[i-1];
             }
             list[index] = item;
+            size++;
         }
     }
     
