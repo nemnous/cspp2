@@ -270,9 +270,11 @@ public class List {
     public void addAll(int items[])
     {
         // write the logic
-        int s = size;
-        for (int i = s; i < s + items.length; i++) {
-            add(items[i]);
+        if (items.length > 0) {
+            int s = size;
+            for (int i = s; i < s + items.length; i++) {
+                add(items[i]);
+            }
         }
     }
 
