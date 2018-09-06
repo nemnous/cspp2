@@ -182,7 +182,7 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index == 0 && index < size) {
+        if(index >= 0 && index < size) {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -231,6 +231,7 @@ public class List {
      * not all the elements of the array.
      *
      */
+
     public String toString() {
         if(size == 0)
             return "";
@@ -288,17 +289,22 @@ public class List {
         if (size == list.length) {
             resize();
         }
-        for ( int i = size + 1; i > index; i++) {
-            list[i] = list[i-1];
+
+        if (index < 0) {
+            System.out.println("Negative Index Exception");
+        } else {
+            for ( int i = size + 1; i > index; i--) {
+                list[i] = list[i-1];
+            }
+            list[index] = item;
         }
-        list[index] = item; 
     }
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
     {
          // write the logic
-        int count = 0; 
+        int count = 0;  
         for (int i : list) {
             if (i == item) {
                 count++;
