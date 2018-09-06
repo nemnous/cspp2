@@ -340,7 +340,7 @@ public class List {
         return count;
     }
     public void resize() {
-            list = Arrays.copyOf(list, 2 * size);
+            list = Arrays.copyOf(list, 2 * list.length);
         }
 
 	public static void main(String[] args) {
