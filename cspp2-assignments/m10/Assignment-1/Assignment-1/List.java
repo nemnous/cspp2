@@ -271,6 +271,9 @@ public class List {
     public void addAll(int items[])
     {
         // write the logic
+        if (size + items.length >= list.length) {
+            resize();
+        }
         if (items.length > 0) {
             int s = size;
             for (int i = s; i < s + items.length; i++) {
