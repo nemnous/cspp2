@@ -271,15 +271,20 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] newArray)
-     {
+     public void removeAll(int[] newArray) {
         // write the logic 
-        for (int i : newArray) {
-        	if(indexOf(i) != -1) {
-        		remove(indexOf(i));
-        	}
-        }
-
+     //    for (int i : newArray) {
+     //    	if(indexOf(i) != -1) {
+     //    		remove(indexOf(i));
+     //    	}
+     //    }
+     	for (int ele : newArray) {
+     		for (int i = 0; i < size; i++) {
+     			if (list[i] == ele) {
+     				remove(i);
+     			}
+     		}
+     	}
      }
     /*
     Returns a list object containing elements, including startIndex and
@@ -313,14 +318,13 @@ public class List {
     	if(this.size() != newlist.size()) {
     		return false;
     	}
-    	// for(int i : this.list) {
-    	// 	System.out.println(i);
+    	// for (int i : this.list) {
+    	// 	if (newlist.indexOf(i) == -1) {
+    	// 		return false;
+    	// 	}
     	// }
-    	// for (int i : list.list ) {
-    	// 	System.out.println(i);
-    	// }
-    	for (int i : this.list) {
-    		if (newlist.indexOf(i) == -1) {
+    	for (int i = 0; i < this.size; i++) {
+    		if (list[i] != newlist.list[i]) {
     			return false;
     		}
     	}
