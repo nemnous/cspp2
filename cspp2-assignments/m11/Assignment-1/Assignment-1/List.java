@@ -295,31 +295,31 @@ public class List {
     		return null;
     	}
 
-    	List sublist = new List();
+    	List newlist = new List();
     	for (int i = start; i < end; i++) {
-    		sublist.add(list[i]);
+    		newlist.add(list[i]);
     	}
-    return sublist;
+    return newlist;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) 
+    public boolean equals(List newlist ) 
     {
     // Replace the code below
-    	list = new List();
-    	if(this.size() != list.size()) {
+    	// list = new List();
+    	if(this.size() != newlist.size()) {
     		return false;
     	}
-    	for(int i : this.list) {
-    		System.out.println(i);
-    	}
-    	for (int i : list.list ) {
-    		System.out.println(i);
-    	}
+    	// for(int i : this.list) {
+    	// 	System.out.println(i);
+    	// }
+    	// for (int i : list.list ) {
+    	// 	System.out.println(i);
+    	// }
     	for (int i : this.list) {
-    		if (list.indexOf(i) == -1) {
+    		if (newlist.indexOf(i) == -1) {
     			return false;
     		}
     	}
