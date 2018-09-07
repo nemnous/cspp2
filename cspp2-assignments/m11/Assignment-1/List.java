@@ -257,15 +257,18 @@ public class List {
     public void addAll(int[] newArray)
     {
         // write the logic
-        if ( size + newArray.length >= size) {
-        	resize();
-        }
-        int s = size;
-        for (int i = s; i < s + newArray.length; i++) {
-        	list[i] = newArray[i - s];
-        	size++;
-        }
+        // if ( size + newArray.length >= size) {
+        // 	resize();
+        // }
+        // int s = size;
+        // for (int i = s; i < s + newArray.length; i++) {
+        // 	list[i] = newArray[i - s];
+        // 	size++;
+        // }
         // size += newArray.length;
+        for (int i : newArray) {
+        	add(i);
+        }
     }
     /*
      Removes all of its elements that are contained in the specified int 
