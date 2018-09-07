@@ -292,6 +292,7 @@ public class List {
     {
     // write the logic for subList
     	if ( start > end || start < 0 || end < 0) {
+    		System.out.println("Index Out of Bounds Exception");
     		return null;
     	}
 
