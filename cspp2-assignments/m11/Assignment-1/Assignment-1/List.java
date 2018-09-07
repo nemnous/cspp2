@@ -308,8 +308,15 @@ public class List {
     public boolean equals(List list ) 
     {
     // Replace the code below
+    	list = new List();
     	if(this.size() != list.size()) {
     		return false;
+    	}
+    	for(int i : this.list) {
+    		System.out.println(i);
+    	}
+    	for (int i : list.list ) {
+    		System.out.println(i);
     	}
     	for (int i : this.list) {
     		if (list.indexOf(i) == -1) {
