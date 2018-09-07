@@ -296,7 +296,7 @@ public class List {
     	}
 
     	List sublist = new List();
-    	for (int i = start; i <= end; i++) {
+    	for (int i = start; i < end; i++) {
     		sublist.add(list[i]);
     	}
     return sublist;
