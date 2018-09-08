@@ -77,17 +77,16 @@ class Set {
     	if(size == 0 || setB.size() == 0) {
     		return null;
     	}
-    	int[][] Arr = new int[2][size * setB.size()];
+    	int[][] Arr = new int[size * setB.size()][2];
     	// int[][] Arr = new int[size][setB.size()];
     	// int[] pair = new int[2];
-    	for(int k = 0; k < size * setB.size(); k++) {
+    	int k = 0;
     		for (int i = 0; i < size; i++) {
 	    		for (int j = 0; j < setB.size(); j ++) {
 	    			Arr[k][0] = set[i];
-	    			Arr[k][1] = setB.set[j];
+	    			Arr[k++][1] = setB.set[j];
 	    		}
 	    	}
-	    }
     	return Arr;
     }
 
