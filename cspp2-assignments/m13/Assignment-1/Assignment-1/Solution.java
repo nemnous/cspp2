@@ -47,9 +47,14 @@ class Set {
     }
     public Set intersection(Set setB) {
     	Set temp = new Set();
-    	for(int i = 0; i < setB.size(); i++) {
-    		if(contains(setB.set[i])) {
-    			temp.add(setB.set[i]);
+    	// for(int i = 0; i < setB.size(); i++) {
+    	// 	if(contains(setB.set[i])) {
+    	// 		temp.add(setB.set[i]);
+    	// 	}
+    	// }
+    	for(int i = 0; i < size; i++) {
+    		if(setB.contains(set[i])) {
+    			temp.add(set[i]);
     		}
     	}
     	return temp;
@@ -90,7 +95,7 @@ class Set {
         }
         String str = "{";
         for (int i = 0; i < size - 1; i++) {
-        	str += (set[i] + ",");
+        	str += (set[i] + ", ");
         }
         str += (set[size-1] + "}");
         return str;
