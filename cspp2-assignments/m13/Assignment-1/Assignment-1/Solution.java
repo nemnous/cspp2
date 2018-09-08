@@ -4,104 +4,165 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author : nemnous.
  */
 class Set {
-    //your code goes here...
-    //Good luck :-)
+    /**
+     * set int.
+     */
     private int[] set;
+    /**
+     * size int.
+     */
     private int size;
-
-    public Set() {
-    	set = new int[10];
-    	size = 0;
+    /**
+     * Constructs the object.
+     */
+    Set() {
+        final int ten = 10;
+        set = new int[ten];
+        size = 0;
     }
-
-    public Set(int n) {
-    	set = new int[n];
-    	size = 0;
+    /**
+     * Constructs the object.
+     *
+     * @param      n     { parameter_description }
+     */
+    Set(final int n) {
+        set = new int[n];
+        size = 0;
     }
+    /**
+     * size func.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
-    	return size;
+        return size;
     }
-    public Boolean contains(int number) {
-    	for (int i = 0; i < size; i++) {
-    		if (set[i] == number) {
-    			return true;
-    		}
-    	}
-    	return false;
+    /**
+     * contains func.
+     *
+     * @param      number  The number
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Boolean contains(final int number) {
+        for (int i = 0; i < size; i++) {
+            if (set[i] == number) {
+                return true;
+            }
+        }
+        return false;
     }
-    public void add(int number) {
-    	if (!contains(number)) {
-    		set[size++] = number;
-    	}
+    /**
+     * add func.
+     *
+     * @param      number  The number
+     */
+    public void add(final int number) {
+        if (!contains(number)) {
+            set[size++] = number;
+        }
     }
-    public void add(int[] array) {
-    	if (size == set.length) {
-    		resize();
-    	}
-    	for(int i = 0; i < array.length; i++) {
-    		add(array[i]);
-    	}
+    /**
+     * add func.
+     *
+     * @param      array  The array
+     */
+    public void add(final int[] array) {
+        if (size == set.length) {
+            resize();
+        }
+        for (int i = 0; i < array.length; i++) {
+            add(array[i]);
+        }
     }
-    public Set intersection(Set setB) {
-    	Set temp = new Set();
-    	// for(int i = 0; i < setB.size(); i++) {
-    	// 	if(contains(setB.set[i])) {
-    	// 		temp.add(setB.set[i]);
-    	// 	}
-    	// }
-    	for(int i = 0; i < size; i++) {
-    		if(setB.contains(set[i])) {
-    			temp.add(set[i]);
-    		}
-    	}
-    	return temp;
+    /**
+     * intersection func.
+     *
+     * @param      setB  The set b
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set intersection(final Set setB) {
+        Set temp = new Set();
+        // for(int i = 0; i < setB.size(); i++) {
+        //  if(contains(setB.set[i])) {
+        //      temp.add(setB.set[i]);
+        //  }
+        // }
+        for (int i = 0; i < size; i++) {
+            if (setB.contains(set[i])) {
+                temp.add(set[i]);
+            }
+        }
+        return temp;
     }
+    /**
+     * resize function.
+     */
     public void resize() {
         set = Arrays.copyOf(set, 2 * set.length);
     }
-    public Set retainAll(int[] array) {
-    	Set temp = new Set();
-    	for (int i = 0; i < size; i++) {
-    		for (int j = 0; j < array.length; j++) {
-    			if (set[i] == array[j]) {
-    				temp.add(array[j]);
-    			}
-    		}
-    	}
-    	return temp;
+    /**
+     * retain all.
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set retainAll(final int[] array) {
+        Set temp = new Set();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (set[i] == array[j]) {
+                    temp.add(array[j]);
+                }
+            }
+        }
+        return temp;
     }
-    public int[][] cartesianProduct(Set setB) {
-    	if(size == 0 || setB.size() == 0) {
-    		return null;
-    	}
-    	int[][] Arr = new int[size * setB.size()][2];
-    	// int[][] Arr = new int[size][setB.size()];
-    	// int[] pair = new int[2];
-    	int k = 0;
-    		for (int i = 0; i < size; i++) {
-	    		for (int j = 0; j < setB.size(); j ++) {
-	    			Arr[k][0] = set[i];
-	    			Arr[k++][1] = setB.set[j];
-	    		}
-	    	}
-    	return Arr;
+    /**
+     * cartesian product func.
+     *
+     * @param      setB  The set b
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set setB) {
+        if (size == 0 || setB.size() == 0) {
+            return null;
+        }
+        int[][] array = new int[size * setB.size()][2];
+        // int[][] Arr = new int[size][setB.size()];
+        // int[] pair = new int[2];
+        int k = 0;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < setB.size(); j++) {
+                array[k][0] = set[i];
+                array[k++][1] = setB.set[j];
+            }
+        }
+        return array;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         if (size == 0) {
-        	return "{}";
+            return "{}";
         }
         String str = "{";
         for (int i = 0; i < size - 1; i++) {
-        	str += (set[i] + ", ");
+            str += (set[i] + ", ");
         }
-        str += (set[size-1] + "}");
+        str += (set[size - 1] + "}");
         return str;
-    } 
+    }
 }
 /**
  * Solution class for code-eval.
@@ -129,8 +190,8 @@ public final class Solution {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
     /**
      * main function to execute test cases.
@@ -150,16 +211,16 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-                case "size":
+            case "size":
                 System.out.println(s.size());
                 break;
-                case "contains":
+            case "contains":
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
-                case "print":
+            case "print":
                 System.out.println(s);
                 break;
-                case "add":
+            case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
@@ -167,7 +228,7 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                case "intersection":
+            case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -176,14 +237,14 @@ public final class Solution {
                 t.add(intArray);
                 System.out.println(s.intersection(t));
                 break;
-                case "retainAll":
+            case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                case "cartesianProduct":
+            case "cartesianProduct":
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
@@ -192,7 +253,7 @@ public final class Solution {
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
-                default:
+            default:
                 break;
             }
         }
