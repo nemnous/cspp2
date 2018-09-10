@@ -146,24 +146,25 @@ public class Set {
         }
         return array;
     }
+    public String toString() {
+        // Replace the code below
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        for (int i = 0; i < size - 1; i++) {
+            str += (set[i] + ", ");
+        }
+        str += (set[size - 1] + "}");
+        return str;
+    }
 }
     // /**
     //  * Returns a string representation of the object.
     //  *
     //  * @return     String representation of the object.
     //  */
-//     public String toString() {
-//         // Replace the code below
-//         if (size == 0) {
-//             return "{}";
-//         }
-//         String str = "{";
-//         for (int i = 0; i < size - 1; i++) {
-//             str += (set[i] + ", ");
-//         }
-//         str += (set[size - 1] + "}");
-//         return str;
-//     }
+    
 // }
 // /**
 //  * Solution class for code-eval.
