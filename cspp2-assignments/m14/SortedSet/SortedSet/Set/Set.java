@@ -21,7 +21,7 @@ public class Set {
      * Constructs the object.
      */
     public Set() {
-        final int ten = 10;
+         int ten = 10;
         set = new int[ten];
         size = 0;
     }
@@ -30,7 +30,7 @@ public class Set {
      *
      * @param      n     { parameter_description }
      */
-    // Set(final int n) {
+    // Set( int n) {
     //     set = new int[n];
     //     size = 0;
     // }
@@ -49,7 +49,7 @@ public class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Boolean contains(final int number) {
+    public Boolean contains( int number) {
         for (int i = 0; i < size; i++) {
             if (set[i] == number) {
                 return true;
@@ -62,7 +62,7 @@ public class Set {
      *
      * @param      number  The number
      */
-    public void add(final int number) {
+    public void add( int number) {
         if (!contains(number)) {
             set[size++] = number;
         }
@@ -72,7 +72,7 @@ public class Set {
      *
      * @param      array  The array
      */
-    public void add(final int[] array) {
+    public void add( int[] array) {
         if (size == set.length) {
             resize();
         }
@@ -87,7 +87,7 @@ public class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(final Set setB) {
+    public Set intersection( Set setB) {
         Set temp = new Set();
         // for(int i = 0; i < setB.size(); i++) {
         //  if(contains(setB.set[i])) {
@@ -114,7 +114,7 @@ public class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(final int[] array) {
+    public Set retainAll( int[] array) {
         Set temp = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < array.length; j++) {
@@ -132,7 +132,7 @@ public class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[][] cartesianProduct(final Set setB) {
+    public int[][] cartesianProduct( Set setB) {
         if (size == 0 || setB.size() == 0) {
             return null;
         }
@@ -168,7 +168,7 @@ public class Set {
 // /**
 //  * Solution class for code-eval.
 //  */
-// public final class Solution {
+// public  class Solution {
 //     /**
 //      * Constructs the object.
 //      */
@@ -182,7 +182,7 @@ public class Set {
 //      *
 //      * @return     { int array from the given string }
 //      */
-//     public static int[] intArray(final String s) {
+//     public static int[] intArray( String s) {
 //         String input = s;
 //         if (input.equals("[]")) {
 //             return new int[0];
@@ -199,7 +199,7 @@ public class Set {
 //      *
 //      * @param      args  The arguments
 //      */
-//     public static void main(final String[] args) {
+//     public static void main( String[] args) {
 //         // instantiate this set
 //         Set s = new Set();
 //         // code to read the test cases input file
