@@ -415,6 +415,15 @@ class List {
         this.array = new int[defaultsize];
         this.size = 0;
     }
+    public int count(int ele) {
+        int count = 0;
+        for(int i : array) {
+            if(ele == i) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
 public class Solution {
     /**
@@ -523,6 +532,10 @@ public class Solution {
                 break;
             case "clear":
                 l.clear();
+                break;
+            case "count":
+                int c = l.count(Integer.parseInt(tokens[1]));
+                System.out.println(c);
                 break;
             default:
                 break;
