@@ -11,8 +11,15 @@ import java.util.Arrays;
 //         super(message);
 //     }
 // }
+
+/**
+ * Class for index out of bounds.
+ */
 class IndexOutOfBounds extends Exception {
-    IndexOutOfBounds () {
+    /**
+     * Constructs the object.
+     */
+    IndexOutOfBounds() {
         // super(message);
     }
 }
@@ -86,7 +93,7 @@ class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -178,8 +185,7 @@ class List {
                 array[array.length - 1] = 0;
                 size--;
             }
-        }
-        catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid Position Exception");
             //System.out.println(Arrays.toString(array));
         }
@@ -351,27 +357,36 @@ class List {
     */
 
     /**
-     * sublist getter.
+     * subList.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start             The start
+     * @param      end               The end
      *
-     * @return     { description_of_the_return_value }
+     * @return     no.
+     *
+     * @throws     IndexOutOfBounds lol.
      */
-    public List subList(final int start, final int end) throws IndexOutOfBounds {
+public List subList(final int start, final int end)
+    /**
+     * index out of bounds.
+     */
+        throws IndexOutOfBounds {
         // write the logic for subList
         List slist = new List();
-        
+
         if (start >= end || (start < 0 || end < 0) || size == 0) {
+            /**
+             * index out of bounds.
+             */
             throw new IndexOutOfBounds();
         } else {
             for (int i = start; i < end; i++) {
-                    slist.add(array[i]);
+                slist.add(array[i]);
             }
-    }
-            return slist;
+        }
+        return slist;
 
-}
+    }
 
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -415,17 +430,33 @@ class List {
         this.array = new int[defaultsize];
         this.size = 0;
     }
-    public int count(int ele) {
+    /**
+     * count func.
+     *
+     * @param      ele   The ele
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int ele) {
         int count = 0;
-        for(int i : array) {
-            if(ele == i) {
+        for (int i : array) {
+            if (ele == i) {
                 count++;
             }
         }
         return count;
     }
 }
-public class Solution {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //iunused constructor.
+    }
     /**
      * main method.
      *
@@ -508,18 +539,15 @@ public class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 try {
-                List object = l.subList(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null) {
-                    System.out.println(object);
-                }
-                }
-                catch (IndexOutOfBounds E) {
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
+                        System.out.println(object);
+                    }
+                } catch (IndexOutOfBounds E) {
                     System.out.println("Index Out of Bounds Exception");
                 }
                 break;
-
-                
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
