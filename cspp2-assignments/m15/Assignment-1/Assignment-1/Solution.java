@@ -363,6 +363,7 @@ class List {
         }
         catch (IndexOutOfBoundsException E) {
             System.out.println("Index Out of Bounds Exception");
+            return null;
         }
         return slist;
     }
