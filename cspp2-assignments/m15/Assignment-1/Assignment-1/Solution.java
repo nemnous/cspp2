@@ -360,13 +360,15 @@ class List {
      */
     public List subList(final int start, final int end) throws IndexOutOfBounds {
         // write the logic for subList
+        List slist = new List();
+        
         if (start >= end || (start < 0 || end < 0) || size == 0) {
             throw new IndexOutOfBounds("Index Out of Bounds Exception");
             // return null;
-        }
-        List slist = new List();
-        for (int i = start; i < end; i++) {
-                slist.add(array[i]);
+        } else {
+            for (int i = start; i < end; i++) {
+                    slist.add(array[i]);
+            }
     }
             return slist;
 
