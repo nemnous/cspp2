@@ -505,11 +505,12 @@ public class Solution {
                 if (object != null) {
                     System.out.println(object);
                 }
-                break;
                 }
                 catch (IndexOutOfBounds E) {
                     System.out.println("​Index Out of Bounds Exception");
                 }
+                break;
+
                 
             case "equals":
                 if (tokens.length == 2) {
