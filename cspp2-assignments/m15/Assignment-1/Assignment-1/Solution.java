@@ -169,8 +169,8 @@ class List {
                 size--;
             }
         }
-        catch (Exception e) {
-            System.out.println(e);
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid Position Exception");
             //System.out.println(Arrays.toString(array));
         }
 
