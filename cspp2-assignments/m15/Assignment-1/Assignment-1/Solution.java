@@ -6,7 +6,16 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+// class InvalidPositionException extends Exception {
+//     InvalidPositionException(String message) {
+//         super(message);
+//     }
+// }
+class IndexOutOfBounds extends Exception {
+    IndexOutOfBounds (String message) {
+        super(message);
+    }
+}
 /**
  * List of .
  */
@@ -108,6 +117,7 @@ class List {
      * The method returns void (nothing).
      * @param item item to be added.
      */
+
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         array[size++] = item;
@@ -348,25 +358,19 @@ class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws IndexOutOfBounds {
         // write the logic for subList
-        // if (start >= end || (start < 0 || end < 0) || size == 0) {
-        //     System.out.println("Index Out of Bounds Exception");
-        //     return null;
-        // }
+        if (start >= end || (start < 0 || end < 0) || size == 0) {
+            throw new IndexOutOfBounds("Index Out of Bounds Exception");
+            // return null;
+        }
         List slist = new List();
-
-        try {
-            for (int i = start; i < end; i++) {
+        for (int i = start; i < end; i++) {
                 slist.add(array[i]);
-            }
-        }
-        catch (IndexOutOfBoundsException E) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
-        return slist;
     }
+            return slist;
+
+}
 
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -493,12 +497,18 @@ public class Solution {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
+                try {
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+                }
+                catch (IndexOutOfBounds E) {
+                    System.out.println("​Index Out of Bounds Exception");
+                }
+                
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
