@@ -12,8 +12,8 @@ import java.util.Arrays;
 //     }
 // }
 class IndexOutOfBounds extends Exception {
-    IndexOutOfBounds (String message) {
-        super(message);
+    IndexOutOfBounds () {
+        // super(message);
     }
 }
 /**
@@ -363,8 +363,7 @@ class List {
         List slist = new List();
         
         if (start >= end || (start < 0 || end < 0) || size == 0) {
-            throw new IndexOutOfBounds("Index Out of Bounds Exception");
-            // return null;
+            throw new IndexOutOfBounds();
         } else {
             for (int i = start; i < end; i++) {
                     slist.add(array[i]);
