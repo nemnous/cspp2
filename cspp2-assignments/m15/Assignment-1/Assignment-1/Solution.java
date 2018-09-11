@@ -506,7 +506,7 @@ public class Solution {
                 }
                 }
                 catch (IndexOutOfBounds E) {
-                    System.out.println("​Index Out of Bounds Exception");
+                    System.out.println("​fuck");
                 }
                 break;
 
