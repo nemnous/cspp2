@@ -94,7 +94,7 @@ class Solution {
 			}
 		}
 		for (int i = 0; i < len ; i++ )
-			System.out.print(" " + "\t" + listOfFiles[i]);
+			System.out.print(" " + "\t" + listOfFiles[i].toString().split("\\")[1]);
 		System.out.println();
 		for (int i = 0 ; i < len; i++) {
 			System.out.print(listOfFiles[i] + " " + "\t");
