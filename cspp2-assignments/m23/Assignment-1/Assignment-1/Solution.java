@@ -39,7 +39,7 @@ class Plagarism {
 		double sum = 0;
 		double result;
 		for (String key : mappy.keySet()) {
-			sum += mappy.get(key);
+			sum += Math.pow(mappy.get(key), 2);
 		}
 		return Math.sqrt(sum);
 	}
@@ -47,14 +47,17 @@ class Plagarism {
 		double Sum = 0;
 		for (String word : mappy1.keySet()) {
 			if (mappy2.containsKey(word)) {
-				Sum = mappy1.get(word) * mappy2.get(word);
+				Sum += mappy1.get(word) * mappy2.get(word);
 			}
 		}
 		return Sum;
 	}
 	double percentPlag(File doc1, File doc2) {
-		String DocString1 = cleanDoc(DocToString(doc1));
-		String DocString2 = cleanDoc(DocToString(doc2));
+		// String DocString1 = cleanDoc(DocToString(doc1));
+		// String DocString2 = cleanDoc(DocToString(doc2));
+		String DocString1 = DocToString(doc1).toLowerCase();
+		String DocString2 = DocToString(doc2).toLowerCase();
+		System.out.println(DocString1);
 		String[] listStr1 = DocString1.split(" ");
 		String[] listStr2 = DocString2.split(" ");
 		HashMap<String, Integer> map1 = new HashMap<String, Integer>();
@@ -66,7 +69,7 @@ class Plagarism {
 			map2.put(word, Count(word, listStr2));
 		}
 		// for (String key : map2.keySet()) {
-		// 	// System.out.println(key + " " + map2.get(key));
+		// 	System.out.println(key + " " + map2.get(key));
 		// }
 		double EuNo1 = EucledianNorm(map1);
 		double EuNo2 = EucledianNorm(map2);
@@ -92,7 +95,7 @@ class Solution {
 		}
 		for (int i = 0 ; i < len; i++) {
 			for (int j = 0; j < len; j++) {
-				System.out.print(percent[i][j] + " ");
+				System.out.print((int)percent[i][j] + " ");
 			}
 			System.out.println("");
 		}
