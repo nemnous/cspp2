@@ -57,7 +57,7 @@ class Plagarism {
 		// String DocString2 = cleanDoc(DocToString(doc2));
 		String DocString1 = DocToString(doc1).toLowerCase();
 		String DocString2 = DocToString(doc2).toLowerCase();
-		System.out.println(DocString1);
+		// System.out.println(DocString1);
 		String[] listStr1 = DocString1.split(" ");
 		String[] listStr2 = DocString2.split(" ");
 		HashMap<String, Integer> map1 = new HashMap<String, Integer>();
