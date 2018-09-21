@@ -97,11 +97,11 @@ class Solution {
 			System.out.print(listOfFiles[i] + " " + "\t");
 		System.out.println();
 		for (int i = 0 ; i < len; i++) {
+			System.out.print(listOfFiles[i] + " " + "\t");
 			for (int j = 0; j < len; j++) {
 				System.out.print((int)percent[i][j] + " " + "\t");
 			}
 			System.out.println("");
-			System.out.print(listOfFiles[i] + " " + "\t");
 
 		}
 	}
