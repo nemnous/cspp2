@@ -94,35 +94,49 @@ class Todoist {
     	}
     	return null;
     }
-    // public Task getNextTask(String name, int count) {
-    // 	Task[] getArray = new Task[10];
-    // 	for(int i = 0; i < count; i++) {
-    // 		if(getNextTask(name) != null) {
-
-    // 		}
-    // 	}
     public Task[] getNextTask(String name, int count) {
-    	Task[] getArray = new Task[count+1];
+    	Task[] getArray = new Task[count];
+    	// for(int i = 0; i < count; i++) {
+    	// 	if(getNextTask(name) != null) {
+
+    	// 	}
     	int j = 0;
-    	while(j <= count) {
-	    	for(int i = 0; i < size; i++) {
-	    		if(taskArray[i].assignedTo.equals(name)) {
-	    			if(taskArray[i].important && !taskArray[i].urgent) {
-	    				getArray[j++] = taskArray[i];
-	    				continue;
-	    			}
-	    		}
-	    	}
-	  		for(int i = 0; i < size; i++) {
-	    		if(taskArray[i].assignedTo.equals(name)) {
-	    			if(taskArray[i].important && taskArray[i].urgent) {
-	    				getArray[j++] = taskArray[i];
-	    			}
-	    		}
-	    	}
-	    	}
-	    return getArray;
-	    }
+    		for(int i = 0; i < size&& j <= count; i++) {
+    		if(taskArray[i].assignedTo.equals(name)) {
+    			if(taskArray[i].important && !taskArray[i].urgent && taskArray[i].status.equals("todo")) {
+    				 getArray[j++] = taskArray[i];
+    			}
+    		}
+    	}
+  		for(int i = 0; i < size && j < count; i++) {
+    		if(taskArray[i].assignedTo.equals(name)) {
+    			if(taskArray[i].important && taskArray[i].urgent && taskArray[i].status.equals("todo")) {
+    				getArray[j++] = taskArray[i];
+    			}
+    		}
+    	}
+    	return getArray;
+    	}
+    // public Task[] getNextTask(String name, int count) {
+    // 	Task[] getArray = new Task[count];
+    // 	int j = 0;
+	   //  	for(int i = 0; i < size; i++) {
+	   //  		if(taskArray[i].assignedTo.equals(name)) {
+	   //  			if(taskArray[i].important && !taskArray[i].urgent) {
+	   //  				getArray[j++] = taskArray[i];
+	   //  				continue;
+	   //  			}
+	   //  		}
+	   //  	}
+	  	// 	for(int i = 0; i < size; i++) {
+	   //  		if(taskArray[i].assignedTo.equals(name)) {
+	   //  			if(taskArray[i].important && taskArray[i].urgent) {
+	   //  				getArray[j++] = taskArray[i];
+	   //  			}
+	   //  		}
+	   //  	}
+	   //  return getArray;
+	   //  }
 	    public int totalTime4Completion() {
 	    	int sum = 0;
 	    	for(int i = 0; i < size; i++) {
