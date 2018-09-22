@@ -96,12 +96,13 @@ class Todoist {
     }
     public Task[] getNextTask(String name, int count) {
     	Task[] getArray = new Task[10];
+    	Task[] mrArray = new Task[count];
     	// for(int i = 0; i < count; i++) {
     	// 	if(getNextTask(name) != null) {
 
     	// 	}
     	int j = 0;
-    		for(int i = 0; i < size&& j <= count; i++) {
+    		for(int i = 0; i < size && j <= count; i++) {
 	    		if(taskArray[i].assignedTo.equals(name)) {
 	    			if(taskArray[i].important && !taskArray[i].urgent && taskArray[i].status.equals("todo")) {
 	    				 getArray[j++] = taskArray[i];
@@ -115,7 +116,10 @@ class Todoist {
 	    			}
 	    		}
 	    	}
-    	return getArray;
+	    	for(int i = 0; i < count; i++) {
+	    		mrArray[i] = getArray[i];
+	    	}
+    	return mrArray;
     	}
     // public Task[] getNextTask(String name, int count) {
     // 	Task[] getArray = new Task[count];
