@@ -78,17 +78,17 @@ class Todoist {
     	return str;
     }
     public Task getNextTask(String name) {
-    	for(Task t : taskArray) {
-    		if(t.assignedTo.equals(name)) {
-    			if(t.important && !t.urgent) {
-    				return t;
+    	for(int i = 0; i < size; i++) {
+    		if(taskArray[i].assignedTo.equals(name)) {
+    			if(taskArray[i].important && !taskArray[i].urgent) {
+    				return taskArray[i];
     			}
     		}
     	}
-  		for(Task t : taskArray) {
-    		if(t.assignedTo.equals(name)) {
-    			if(t.important && t.urgent) {
-    				return t;
+  		for(int i = 0; i < size; i++) {
+    		if(taskArray[i].assignedTo.equals(name)) {
+    			if(taskArray[i].important && taskArray[i].urgent) {
+    				return taskArray[i];
     			}
     		}
     	}
