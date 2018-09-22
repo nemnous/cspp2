@@ -69,11 +69,10 @@ class Todoist {
         taskArray = Arrays.copyOf(taskArray, 2 * taskArray.length);
     }
     public String toString() {
-    	String str = "";
     	for(Task t : taskArray) {
-    		str += (t.title +", " + t.assignedTo + ", " + t.timeToComplete +", " +t.imp +", " + t.urg +", " + t.status);
+    		System.out.println(t.toString());
     	}
-    	return str;
+    	return "";
     }
     public Task getNextTask(String name) {
     	for(Task t : taskArray) {
