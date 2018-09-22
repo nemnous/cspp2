@@ -26,7 +26,7 @@ public class Inversemat {
 				inverse[i][j] = Det3x3 * AdjMat[i][j];
 		for(int i = 0; i < 3; i++){
 			for (int j = 0; j < 3; j++){
-				System.out.print(inverse[i][j]);
+				System.out.print(inverse[i][j] + " ");
 			}
 			System.out.println("");
 		}
@@ -49,6 +49,7 @@ public class Inversemat {
 				n++;
 
 				}
+				m++;
 		}
 		return mat1;
 	}

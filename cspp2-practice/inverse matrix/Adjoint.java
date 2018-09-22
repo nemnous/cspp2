@@ -15,6 +15,7 @@ public class Adjoint {
 			for (int j = 0; j < 3; j++) {
 				// CofactorMat[i][j] = (Math.pow(-1,i+j)*Det2x2(removerc(matrix,i,j)));
 				int[][] temp = removerc(matrix,i,j);
+				
 				int det = Det2x2(temp);
 				System.out.println((int)Math.pow(-1,i+j)*det);
 			}

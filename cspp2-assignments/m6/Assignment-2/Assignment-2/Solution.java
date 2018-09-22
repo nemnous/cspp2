@@ -31,17 +31,20 @@ final class Solution {
         for (int j = 0; j < columns; j++) {
             final int hundred = 100;
             for (int k = 0; k < a[i][j] + hundred; k += hundred) {
-                int low = k;
-                int high = k + hundred;
-                int mid = (low + high) / 2;
+                int low = k,high = k + 100,mid = (low + high) / 2;
+                // int low = k;
+                // int high = k + hundred;
+                // int mid = (low + high) / 2;
                 if (a[i][j] > low && a[i][j] <= high) {
-                    if (a[i][j] < mid) {
-                        matrix[i][j] = low;
-                        break;
-                    } else {
-                        matrix[i][j] = high;
-                        break;
-                    }
+                    matrix[i][j] = (a[i][j] < mid) ? low : high;
+                    break;
+                    // if (a[i][j] < mid) {
+                    //     matrix[i][j] = low;
+                    //     break;
+                    // } else {
+                    //     matrix[i][j] = high;
+                    //     break;
+                    // }
                 }
             }
         }

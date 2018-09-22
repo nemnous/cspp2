@@ -93,16 +93,17 @@ class Solution {
 				percent[i][j] = PlagarismCheck.percentPlag(listOfFiles[i], listOfFiles[j]);
 			}
 		}
+		String[] temp = new String[2];
 		for (int i = 0; i < len ; i++ )
-			System.out.print(" " + "\t" + listOfFiles[i].toString());
+			temp = listOfFiles[i].toString().split("\\");
+			System.out.print(" " + "\t" + temp[1]);
 		System.out.println();
 		for (int i = 0 ; i < len; i++) {
 			System.out.print(listOfFiles[i] + " " + "\t");
 			for (int j = 0; j < len; j++) {
 				System.out.print((int)percent[i][j] + " " + "\t");
 			}
-			System.out.println("");
-
+			System.out.println 
 		}
 	}
 }
