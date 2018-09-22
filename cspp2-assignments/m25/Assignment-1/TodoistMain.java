@@ -70,9 +70,11 @@ class Todoist {
     }
     public String toString() {
     	String str = "";
-    	for(Task t : taskArray) {
-    		str += t.toString();
+    	int i;
+    	for(i = 0; i < size-1; i++) {
+    		str += taskArray[i].toString() + "\n";
     	}
+    	str += taskArray[i];
     	return str;
     }
     public Task getNextTask(String name) {
