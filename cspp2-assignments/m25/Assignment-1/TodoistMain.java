@@ -22,7 +22,7 @@ class Task {
 		if(timeToComplete > 0) {
 			this.timeToComplete = timeToComplete;
 		} else {
-			System.out.println("Invalid timeToComplete" + timeToComplete);
+			System.out.println("Invalid timeToComplete " + timeToComplete);
 			System.exit(0);
 		}
 		this.important = important;
@@ -30,7 +30,7 @@ class Task {
 		if(status.equals("todo") || status.equals("done")) {
 			this.status = status;
 		} else {
-			System.out.println("Invalid status" + status);
+			System.out.println("Invalid status " + status);
 			System.exit(0);
 		}
 
