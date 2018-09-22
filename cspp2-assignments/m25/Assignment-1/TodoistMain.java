@@ -104,7 +104,7 @@ class Todoist {
     public Task[] getNextTask(String name, int count) {
     	Task[] getArray = new Task[count];
     	int j = 0;
-    	if(j <= count) {
+    	while(j <= count) {
 	    	for(int i = 0; i < size; i++) {
 	    		if(taskArray[i].assignedTo.equals(name)) {
 	    			if(taskArray[i].important && !taskArray[i].urgent) {
