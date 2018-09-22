@@ -102,7 +102,7 @@ class Todoist {
     // 		}
     // 	}
     public Task[] getNextTask(String name, int count) {
-    	Task[] getArray = new Task[10];
+    	Task[] getArray = new Task[count];
     	int j = 0;
     	if(j <= count) {
 	    	for(int i = 0; i < size; i++) {
