@@ -9,6 +9,8 @@ class Task {
 	int timeToComplete;
 	boolean important;
 	boolean urgent;
+	String imp,urg;
+
 	public Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
 		if(title.equals("")) {
 			System.out.println("Title not provided");
@@ -33,10 +35,6 @@ class Task {
 			System.out.println("Invalid status " + status);
 			System.exit(0);
 		}
-
-	}
-	public String toString() {
-		String imp,urg;
 		if(important) {
 			imp = "Important";
 		} else {
@@ -47,6 +45,9 @@ class Task {
 		} else {
 			urg = "Not Urgent";
 		}
+
+	}
+	public String toString() {
 		return (title +", " + assignedTo + ", " + timeToComplete +", " +imp +", " + urg +", " + status);
 	}
 }
@@ -70,7 +71,7 @@ class Todoist {
     public String toString() {
     	String str = "";
     	for(Task t : taskArray) {
-    		str += t.toString();
+    		str += (t.title +", " + t.assignedTo + ", " + t.timeToComplete +", " +t.imp +", " + t.urg +", " + t.status);
     	}
     	return str;
     }
