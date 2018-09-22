@@ -36,8 +36,18 @@ class Task {
 
 	}
 	public String toString() {
-
-		return (title +", " + assignedTo + ", " + timeToComplete +", " +important +", " + urgent +", " + status);
+		String imp,urg;
+		if(important) {
+			imp = "Important";
+		} else {
+			imp = "Not Important";
+		}
+		if(urgent) {
+			urg = "Urgent";
+		} else {
+			urg = "Not Urgent";
+		}
+		return (title +", " + assignedTo + ", " + timeToComplete +", " +imp +", " + urg +", " + status);
 	}
 }
 
