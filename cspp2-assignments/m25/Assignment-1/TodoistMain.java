@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
      * Constructs the object.
      */
@@ -86,14 +86,15 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        final int three = 3, four = 4, five = 5, six = 6;
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+        title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
@@ -105,3 +106,4 @@ public class TodoistMain {
         startTest();
     }
 }
+
