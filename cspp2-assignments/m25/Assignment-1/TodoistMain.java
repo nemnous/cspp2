@@ -95,26 +95,26 @@ class Todoist {
     	return null;
     }
     public Task[] getNextTask(String name, int count) {
-    	Task[] getArray = new Task[count];
+    	Task[] getArray = new Task[10];
     	// for(int i = 0; i < count; i++) {
     	// 	if(getNextTask(name) != null) {
 
     	// 	}
     	int j = 0;
     		for(int i = 0; i < size&& j <= count; i++) {
-    		if(taskArray[i].assignedTo.equals(name)) {
-    			if(taskArray[i].important && !taskArray[i].urgent && taskArray[i].status.equals("todo")) {
-    				 getArray[j++] = taskArray[i];
-    			}
+	    		if(taskArray[i].assignedTo.equals(name)) {
+	    			if(taskArray[i].important && !taskArray[i].urgent && taskArray[i].status.equals("todo")) {
+	    				 getArray[j++] = taskArray[i];
+	    			}
+	    		}
     		}
-    	}
-  		for(int i = 0; i < size && j < count; i++) {
-    		if(taskArray[i].assignedTo.equals(name)) {
-    			if(taskArray[i].important && taskArray[i].urgent && taskArray[i].status.equals("todo")) {
-    				getArray[j++] = taskArray[i];
-    			}
-    		}
-    	}
+	  		for(int i = 0; i < size && j <= count; i++) {
+	    		if(taskArray[i].assignedTo.equals(name)) {
+	    			if(taskArray[i].important && taskArray[i].urgent && taskArray[i].status.equals("todo")) {
+	    				getArray[j++] = taskArray[i];
+	    			}
+	    		}
+	    	}
     	return getArray;
     	}
     // public Task[] getNextTask(String name, int count) {
