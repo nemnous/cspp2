@@ -105,18 +105,18 @@ class Todoist {
     	Task[] getArray = new Task[10];
     	int j = 0;
     	if(j <= count) {
-	    	for(Task t : taskArray) {
-	    		if(t.assignedTo.equals(name)) {
-	    			if(t.important && !t.urgent) {
-	    				getArray[j++] = t;
+	    	for(int i = 0; i < size; i++) {
+	    		if(taskArray[i].assignedTo.equals(name)) {
+	    			if(taskArray[i].important && !taskArray[i].urgent) {
+	    				getArray[j++] = taskArray[i];
 	    				continue;
 	    			}
 	    		}
 	    	}
-	  		for(Task t : taskArray) {
-	    		if(t.assignedTo.equals(name)) {
-	    			if(t.important && t.urgent) {
-	    				getArray[j++] = t;
+	  		for(int i = 0; i < size; i++) {
+	    		if(taskArray[i].assignedTo.equals(name)) {
+	    			if(taskArray[i].important && taskArray[i].urgent) {
+	    				getArray[j++] = taskArray[i];
 	    			}
 	    		}
 	    	}
