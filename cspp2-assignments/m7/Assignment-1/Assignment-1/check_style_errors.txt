@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] F:\PROGRAMMING\JAVA\cspp2\cspp2-assignments\m7\Assignment-1\Assignment-1\Solution.java:36:7: 'public' modifier out of order with the JLS suggestions. [ModifierOrder]
+Audit done.
+Checkstyle ends with 1 errors.
