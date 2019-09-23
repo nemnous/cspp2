@@ -3,7 +3,7 @@
     * Date: 27 Aug 2018
     * Display name and number.
 */
-
+/*comment*/
 import java.util.Scanner;
 /**
     * this is main class.
